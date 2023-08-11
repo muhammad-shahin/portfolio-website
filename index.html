@@ -3,81 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shahin - Developer Website</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body{
-            background-color: rgb(0, 0, 33);
-            color: white;
-            font-family: 'Poppins', sans-serif;
-        }
-        nav{
-            height: 80px;
-            background-color: rgb(18, 18, 62);
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-        nav ul{
-            display: flex;
-            justify-content: center;
-            
-        }
-        nav ul li{
-            list-style: none;
-            margin: 0 23px;
-        }
-        nav ul li a{
-            text-decoration: none;
-            color: white;
-        }
-        nav ul li a:hover{
-            color: #2c9ce7;
-            transition: ;
-        }
-        .left{
-            font-size: 1.5rem;
-        }
-        .firstSection{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 80px 0;
-        }
-        .firstSection div{
-            width: 30%;
-        }
-        .leftSection{
-            font-size: 3rem;
-
-        }
-        .rightSection img{
-            width: 80%;
-        }
-        .name-color{
-            color: #2c9ce7;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">    <title>Shahin - Developer Website</title>
 </head>
 <body>
     <header>
         <nav>
-            <div class="lef">
+            <div class="left">
                 <h1>Shahin's Portfolio</h1>
             </div>
-            <div class="right">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Services</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="/">Contact</a></li>
+                <ul class="nav-menu">
+                    <li><a class="nav-link" href="/">Home</a></li>
+                    <li><a class="nav-link" href="/">About</a></li>
+                    <li><a class="nav-link" href="/">Services</a></li>
+                    <li><a class="nav-link" href="/">Projects</a></li>
+                    <li><a class="nav-link" href="/">Contact</a></li>
                 </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </nav>
     </header>
@@ -86,13 +30,24 @@
         <section class="firstSection">
             <div class="leftSection">
                 <h3>Hi, My name is <span class="name-color">Muhammad Shahin</span></h2>
-                <h3>I am a passionate<br><span class="name-color">Web Developer</span></h2>
+                <h3>I am a passionate<br> <span id="element" class="name-color"></span></h2>
             </div>
             <div class="rightSection">
                 <img src="images/developer-bg.png" alt="banner image">
             </div>
         </section>
+
+        <div class="secondSection"></div>
+
+
     </main>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['App Developer', 'Web Developer', 'Digital Marketer', 'Web Developer'],
+      typeSpeed: 50,
+    });
+  </script>
 </body>
 </html>
